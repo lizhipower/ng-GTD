@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app='GTD'>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>GTD</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!--app-->
+    <script src="js/app.js"></script>
+
+    <!--ctg-->
+    <script src="js/controllers/ctgCtr.js"></script>
+    <script src="js/directives/ctgNav.js"></script>
+    <!--tsk-->
+    <script src="js/controllers/tskCtr.js"></script>
+    <script src="js/directives/tskNav.js"></script>
+    <!--td-->
+    <script src="js/controllers/tdCtr.js"></script>
+    <script src="js/directives/tdNav.js"></script>
+    <!--service-->
+    <script src="js/services/GTDservice.js"></script>
+    <!--directive-->
+    <script src="js/directives/util/clickActive.js"></script>
+    <script src="js/directives/util/contenteditable.js"></script>
+
+
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+
+</head>
+<body >
+
+    <div ng-controller="ctgCtr as ctg" class="ctg">
+        <ctg-nav d="ctg.d"></ctg-nav>
+
+    </div>
+    <div ng-controller="tskCtr as tsk" class="tsk">
+        <tsk-nav task="tsk.task" show="tsk.tskshow"></tsk-nav>
+    </div>
+    <div ng-controller="tdCtr as td" class="td">
+        <td-nav td="td.td" show="td.tdshow"></td-nav>
+    </div>
+
+
+
+</body>
+
+</html>
